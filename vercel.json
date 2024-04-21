@@ -1,0 +1,22 @@
+{
+    "routes": [
+        {
+            "src": "/webhook/.*",
+            "dest": "/api/index.go"
+        },
+        {
+            "src": "/favicon.ico",
+            "headers": {
+                "Cache-Control": "public, max-age=3600"
+            },
+            "continue": true
+        },
+        {
+            "src": "/.*",
+            "headers": {
+                "Cache-Control": "public, max-age=3600"
+            },
+            "dest": "/public/index.html"
+        }
+    ]
+}

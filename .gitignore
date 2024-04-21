@@ -1,0 +1,27 @@
+.DS_Store
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.o
+*.a
+*.zip
+*.rar
+
+*.mp4
+*.mp3
+
+pbbot_app_loginhelper
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+*.prof
+
+*.kns
+
