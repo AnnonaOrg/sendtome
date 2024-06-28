@@ -42,7 +42,7 @@ func init() {
 	})
 	common.Must(err)
 	if strings.EqualFold(os.Getenv("ENABLE_SET_WEBHOOK"), "true") {
-		log.Println("ENABLE_SET_WEBHOOK: true")
+		// log.Println("ENABLE_SET_WEBHOOK: true")
 		commands := []tele.Command{
 			{
 				Text:        "/start",
