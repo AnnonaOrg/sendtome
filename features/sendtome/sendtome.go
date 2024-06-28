@@ -26,10 +26,10 @@ func init() {
 
 // OnText
 func OnPrivateSendToMe(c tele.Context) error {
-	if c.Message().FromChannel() || c.Message().FromGroup() {
+	if c.Message().FromChannel() {
 		return nil
 	}
-	if !c.Message().Private() && !c.Message().IsReply() {
+	if !c.Message().FromGroup() && !c.Message().Private() && !c.Message().IsReply() {
 		return nil
 	}
 	msgId := ""
