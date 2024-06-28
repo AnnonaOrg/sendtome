@@ -16,7 +16,7 @@ func OnGetID(c tele.Context) error {
 	text = fmt.Sprintf("@%s(%d)",
 		c.Message().Sender.Username, c.Message().Sender.ID,
 	)
-	if c.Message().FromGroup() {
+	if c.Message().FromGroup() || c.Message().FromChannel() {
 		if len(c.Message().Chat.Username) > 0 {
 			text = fmt.Sprintf("%s\n%s @%s(%d)", text,
 				c.Message().Chat.Title, c.Message().Chat.Username, c.Message().Chat.ID,
@@ -29,9 +29,4 @@ func OnGetID(c tele.Context) error {
 	}
 
 	return c.Reply(text)
-	// if !c.Message().Private() {
-	// 	c.Bot().Send(c.Sender(), text)
-	// 	return c.Reply(text)
-	// }
-	// return c.Send(text)
 }
