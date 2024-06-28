@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=0.0.2
+VERSION=0.0.3
 APPNAME=telebot_app_serverless_sendtome
 echo "package constvar" > ./internal/constvar/version.go
 echo "const(APP_NAME = \"${APPNAME}\"" >> ./internal/constvar/version.go

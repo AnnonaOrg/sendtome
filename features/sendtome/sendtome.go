@@ -124,10 +124,10 @@ func OnPrivateSendToMe(c tele.Context) error {
 
 // OnPhoto
 func OnPrivateSendToMeByPhoto(c tele.Context) error {
-	if c.Message().FromChannel() || c.Message().FromGroup() {
+	if c.Message().FromChannel() {
 		return nil
 	}
-	if !c.Message().Private() && !c.Message().IsReply() {
+	if !c.Message().FromGroup() && !c.Message().Private() && !c.Message().IsReply() {
 		return nil
 	}
 	msgId := ""
@@ -144,7 +144,7 @@ func OnPrivateSendToMeByPhoto(c tele.Context) error {
 	if len(adminID) == 0 {
 		return nil
 	}
-	senderID := fmt.Sprintf("%d", c.Message().Sender.ID)
+	senderID := fmt.Sprintf("%d", c.Message().Chat.ID)
 	// 管理员回复信息
 	if c.Message().IsReply() && strings.EqualFold(senderID, adminID) {
 		if jsonText, err := json.Marshal(c.Message()); err != nil {
@@ -232,10 +232,10 @@ func OnPrivateSendToMeByPhoto(c tele.Context) error {
 
 // OnAudio
 func OnPrivateSendToMeByAudio(c tele.Context) error {
-	if c.Message().FromChannel() || c.Message().FromGroup() {
+	if c.Message().FromChannel() {
 		return nil
 	}
-	if !c.Message().Private() && !c.Message().IsReply() {
+	if !c.Message().FromGroup() && !c.Message().Private() && !c.Message().IsReply() {
 		return nil
 	}
 	msgId := ""
@@ -252,7 +252,7 @@ func OnPrivateSendToMeByAudio(c tele.Context) error {
 	if len(adminID) == 0 {
 		return nil
 	}
-	senderID := fmt.Sprintf("%d", c.Message().Sender.ID)
+	senderID := fmt.Sprintf("%d", c.Message().Chat.ID)
 	// 管理员回复信息
 	if c.Message().IsReply() && strings.EqualFold(senderID, adminID) {
 		if jsonText, err := json.Marshal(c.Message()); err != nil {
@@ -340,10 +340,10 @@ func OnPrivateSendToMeByAudio(c tele.Context) error {
 
 // OnAnimation
 func OnPrivateSendToMeByAnimation(c tele.Context) error {
-	if c.Message().FromChannel() || c.Message().FromGroup() {
+	if c.Message().FromChannel() {
 		return nil
 	}
-	if !c.Message().Private() && !c.Message().IsReply() {
+	if !c.Message().FromGroup() && !c.Message().Private() && !c.Message().IsReply() {
 		return nil
 	}
 	msgId := ""
@@ -360,7 +360,7 @@ func OnPrivateSendToMeByAnimation(c tele.Context) error {
 	if len(adminID) == 0 {
 		return nil
 	}
-	senderID := fmt.Sprintf("%d", c.Message().Sender.ID)
+	senderID := fmt.Sprintf("%d", c.Message().Chat.ID)
 	// 管理员回复信息
 	if c.Message().IsReply() && strings.EqualFold(senderID, adminID) {
 		if jsonText, err := json.Marshal(c.Message()); err != nil {
@@ -448,10 +448,10 @@ func OnPrivateSendToMeByAnimation(c tele.Context) error {
 
 // OnDocument
 func OnPrivateSendToMeByDocument(c tele.Context) error {
-	if c.Message().FromChannel() || c.Message().FromGroup() {
+	if c.Message().FromChannel() {
 		return nil
 	}
-	if !c.Message().Private() && !c.Message().IsReply() {
+	if !c.Message().FromGroup() && !c.Message().Private() && !c.Message().IsReply() {
 		return nil
 	}
 	msgId := ""
@@ -468,7 +468,7 @@ func OnPrivateSendToMeByDocument(c tele.Context) error {
 	if len(adminID) == 0 {
 		return nil
 	}
-	senderID := fmt.Sprintf("%d", c.Message().Sender.ID)
+	senderID := fmt.Sprintf("%d", c.Message().Chat.ID)
 	// 管理员回复信息
 	if c.Message().IsReply() && strings.EqualFold(senderID, adminID) {
 		if jsonText, err := json.Marshal(c.Message()); err != nil {
@@ -556,10 +556,10 @@ func OnPrivateSendToMeByDocument(c tele.Context) error {
 
 // OnVideo
 func OnPrivateSendToMeByVideo(c tele.Context) error {
-	if c.Message().FromChannel() || c.Message().FromGroup() {
+	if c.Message().FromChannel() {
 		return nil
 	}
-	if !c.Message().Private() && !c.Message().IsReply() {
+	if !c.Message().FromGroup() && !c.Message().Private() && !c.Message().IsReply() {
 		return nil
 	}
 	msgId := ""
@@ -576,7 +576,7 @@ func OnPrivateSendToMeByVideo(c tele.Context) error {
 	if len(adminID) == 0 {
 		return nil
 	}
-	senderID := fmt.Sprintf("%d", c.Message().Sender.ID)
+	senderID := fmt.Sprintf("%d", c.Message().Chat.ID)
 	// 管理员回复信息
 	if c.Message().IsReply() && strings.EqualFold(senderID, adminID) {
 		if jsonText, err := json.Marshal(c.Message()); err != nil {
@@ -664,10 +664,10 @@ func OnPrivateSendToMeByVideo(c tele.Context) error {
 
 // OnVoice
 func OnPrivateSendToMeByVoice(c tele.Context) error {
-	if c.Message().FromChannel() || c.Message().FromGroup() {
+	if c.Message().FromChannel() {
 		return nil
 	}
-	if !c.Message().Private() && !c.Message().IsReply() {
+	if !c.Message().FromGroup() && !c.Message().Private() && !c.Message().IsReply() {
 		return nil
 	}
 	msgId := ""
@@ -684,7 +684,7 @@ func OnPrivateSendToMeByVoice(c tele.Context) error {
 	if len(adminID) == 0 {
 		return nil
 	}
-	senderID := fmt.Sprintf("%d", c.Message().Sender.ID)
+	senderID := fmt.Sprintf("%d", c.Message().Chat.ID)
 	// 管理员回复信息
 	if c.Message().IsReply() && strings.EqualFold(senderID, adminID) {
 		if jsonText, err := json.Marshal(c.Message()); err != nil {
