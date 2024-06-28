@@ -46,7 +46,7 @@ func OnPrivateSendToMe(c tele.Context) error {
 	if len(adminID) == 0 {
 		return nil
 	}
-	senderID := fmt.Sprintf("%d", c.Message().Sender.ID)
+	senderID := fmt.Sprintf("%d", c.Message().Chat.ID)
 	// 管理员回复信息
 	if c.Message().IsReply() && strings.EqualFold(senderID, adminID) {
 		if jsonText, err := json.Marshal(c.Message()); err != nil {
@@ -85,7 +85,7 @@ func OnPrivateSendToMe(c tele.Context) error {
 		return c.Reply("✅回复内容转投成功。")
 	}
 
-	// 收到私聊消息
+	// 收到消息
 	if c.Message().Private() && !strings.EqualFold(senderID, adminID) {
 		if jsonText, err := json.Marshal(c.Message()); err != nil {
 			fmt.Println("收到私聊消息(err)：", c.Message())
