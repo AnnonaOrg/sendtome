@@ -62,7 +62,7 @@ func OnAddBot(c tele.Context) error {
 
 	bot.SetCommands(commands)
 
-	webhookURL := os.Getenv("BOT_TELEGRAM_WEBHOOK_URL")
+	webhookURL := fmt.Sprintf("%s/%s", os.Getenv("BOT_TELEGRAM_WEBHOOK_URL"), botToken)
 	if len(webhookURL) > 0 && strings.HasPrefix(webhookURL, "https") {
 		if _, err := utils.SetTelegramWebhook(botToken, webhookURL); err != nil {
 			msgText := fmt.Sprintf("SetTelegramWebhook Err: %v", err)
