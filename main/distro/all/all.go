@@ -12,4 +12,6 @@ import (
 	_ "github.com/dbidib/sendtome/features/info"
 
 	_ "github.com/dbidib/sendtome/features/sendcrypto"
+
+	_ "github.com/dbidib/sendtome/features/add_bot"
 )
