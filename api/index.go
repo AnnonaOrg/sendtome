@@ -12,7 +12,6 @@ import (
 	"github.com/dbidib/sendtome/features"
 	_ "github.com/dbidib/sendtome/main/distro/all"
 	"github.com/dbidib/sendtome/utils"
-
 	tele "gopkg.in/telebot.v3"
 )
 
@@ -42,37 +41,42 @@ func init() {
 		Synchronous: true,
 	})
 	common.Must(err)
+	if strings.EqualFold(os.Getenv("ENABLE_SET_WEBHOOK"), "true") {
+		log.Println("ENABLE_SET_WEBHOOK: true")
+		commands := []tele.Command{
+			{
+				Text:        "/start",
+				Description: "Start",
+			},
+			{
+				Text:        "/id",
+				Description: "查询自己的用户id信息",
+			},
+			{
+				Text:        "/info",
+				Description: "查询公开群组频道信息",
+			},
+			{
+				Text:        "/ping",
+				Description: "Ping",
+			},
+		}
 
-	commands := []tele.Command{
-		{
-			Text:        "/start",
-			Description: "Start",
-		},
-		{
-			Text:        "/id",
-			Description: "查询自己的用户id信息",
-		},
-		{
-			Text:        "/info",
-			Description: "查询公开群组频道信息",
-		},
-		{
-			Text:        "/ping",
-			Description: "Ping",
-		},
+		if len(os.Getenv("SEND_CRYPTO_MSG")) > 0 {
+			commands = append(commands, tele.Command{
+				Text:        "/sendcrypto",
+				Description: "Send crypto (发送加密货币)",
+			})
+		}
+
+		bot.SetCommands(commands)
+
+		webhookURL := os.Getenv("BOT_TELEGRAM_WEBHOOK_URL")
+		if len(webhookURL) > 0 && strings.HasPrefix(webhookURL, "https") {
+			utils.SetTelegramWebhook(botToken, webhookURL)
+		}
+
 	}
 
-	if len(os.Getenv("SEND_CRYPTO_MSG")) > 0 {
-		commands = append(commands, tele.Command{
-			Text:        "/sendcrypto",
-			Description: "Send crypto (发送加密货币)",
-		})
-	}
-
-	bot.SetCommands(commands)
-	webhookURL := os.Getenv("BOT_TELEGRAM_WEBHOOK_URL")
-	if len(webhookURL) > 0 && strings.HasPrefix(webhookURL, "https") {
-		utils.SetTelegramWebhook(botToken, webhookURL)
-	}
 	features.Handle(bot)
 }
