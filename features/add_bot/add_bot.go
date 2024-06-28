@@ -2,7 +2,7 @@ package add_bot
 
 import (
 	"fmt"
-	"log"
+	// "log"
 	"os"
 	"strings"
 
@@ -20,10 +20,10 @@ func OnAddBot(c tele.Context) error {
 	if !c.Message().Private() {
 		return nil
 	}
-	senderID := fmt.Sprintf("%s", c.Message().Sender.ID)
+	senderID := fmt.Sprintf("%d", c.Message().Sender.ID)
 	managerID := os.Getenv("BOT_MANAGER_ID")
 	if isManger := strings.EqualFold(senderID, managerID); !isManger {
-		log.Printf("非法用户: %s, Admin: %s", senderID, managerID)
+		// log.Printf("非法用户: %s, Admin: %s", senderID, managerID)
 		return nil
 	}
 	botToken := c.Message().Payload
