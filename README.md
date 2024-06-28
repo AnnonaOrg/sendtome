@@ -17,10 +17,13 @@ A Telegram bot 双向私聊机器人
 ##  环境变量
 
 ```bash
-# 机器人token
+# 机器人token （可留空）
 BOT_TELEGRAM_TOKEN
+# 注册webhook url 地址 （每次构建的时候注册webhook，可留空）
+ENABLE_SET_WEBHOOK=
 # 自定义 注册webhook url 地址（每次构建的时候注册这个地址，可留空）
 BOT_TELEGRAM_WEBHOOK_URL
+
 
 #接收消息的用户id（可通过机器人 @VannorBot 获取）
 SENDTOME_ID

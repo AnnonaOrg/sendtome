@@ -1,6 +1,10 @@
 {
     "routes": [
         {
+            "src": "/webhook/tele/.*",
+            "dest": "/api/webhook/index.go"
+        },
+        {
             "src": "/webhook/.*",
             "dest": "/api/index.go"
         },
