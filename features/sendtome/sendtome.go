@@ -116,13 +116,14 @@ func OnPrivateSendToMe(c tele.Context) error {
 
 	if strings.EqualFold(senderID, adminID) {
 		what := fmt.Sprintf("@%s #id%d\n%s %s\nHi,Admin! 别逗了，宝！\n%s",
-			c.Message().Sender.Username,
-			c.Message().Sender.ID,
-			c.Message().Sender.FirstName,
-			c.Message().Sender.LastName,
+			c.Message().Chat.Username,
+			c.Message().Chat.ID,
+			c.Message().Chat.FirstName,
+			c.Message().Chat.LastName,
 			c.Message().Caption)
 		return c.Reply(what)
 	}
+	return nil
 }
 
 // OnPhoto
@@ -226,13 +227,14 @@ func OnPrivateSendToMeByPhoto(c tele.Context) error {
 
 	if strings.EqualFold(senderID, adminID) {
 		what := fmt.Sprintf("@%s #id%d\n%s %s\nHi,Admin! 别逗了，宝！\n%s",
-			c.Message().Sender.Username,
-			c.Message().Sender.ID,
-			c.Message().Sender.FirstName,
-			c.Message().Sender.LastName,
+			c.Message().Chat.Username,
+			c.Message().Chat.ID,
+			c.Message().Chat.FirstName,
+			c.Message().Chat.LastName,
 			c.Message().Caption)
 		return c.Reply(what)
 	}
+	return nil
 }
 
 // OnAudio
@@ -336,13 +338,14 @@ func OnPrivateSendToMeByAudio(c tele.Context) error {
 
 	if strings.EqualFold(senderID, adminID) {
 		what := fmt.Sprintf("@%s #id%d\n%s %s\nHi,Admin! 别逗了，宝！\n%s",
-			c.Message().Sender.Username,
-			c.Message().Sender.ID,
-			c.Message().Sender.FirstName,
-			c.Message().Sender.LastName,
+			c.Message().Chat.Username,
+			c.Message().Chat.ID,
+			c.Message().Chat.FirstName,
+			c.Message().Chat.LastName,
 			c.Message().Caption)
 		return c.Reply(what)
 	}
+	return nil
 }
 
 // OnAnimation
@@ -446,13 +449,14 @@ func OnPrivateSendToMeByAnimation(c tele.Context) error {
 
 	if strings.EqualFold(senderID, adminID) {
 		what := fmt.Sprintf("@%s #id%d\n%s %s\nHi,Admin! 别逗了，宝！\n%s",
-			c.Message().Sender.Username,
-			c.Message().Sender.ID,
-			c.Message().Sender.FirstName,
-			c.Message().Sender.LastName,
+			c.Message().Chat.Username,
+			c.Message().Chat.ID,
+			c.Message().Chat.FirstName,
+			c.Message().Chat.LastName,
 			c.Message().Caption)
 		return c.Reply(what)
 	}
+	return nil
 }
 
 // OnDocument
@@ -556,13 +560,14 @@ func OnPrivateSendToMeByDocument(c tele.Context) error {
 
 	if strings.EqualFold(senderID, adminID) {
 		what := fmt.Sprintf("@%s #id%d\n%s %s\nHi,Admin! 别逗了，宝！\n%s",
-			c.Message().Sender.Username,
-			c.Message().Sender.ID,
-			c.Message().Sender.FirstName,
-			c.Message().Sender.LastName,
+			c.Message().Chat.Username,
+			c.Message().Chat.ID,
+			c.Message().Chat.FirstName,
+			c.Message().Chat.LastName,
 			c.Message().Caption)
 		return c.Reply(what)
 	}
+	return nil
 }
 
 // OnVideo
@@ -666,13 +671,14 @@ func OnPrivateSendToMeByVideo(c tele.Context) error {
 
 	if strings.EqualFold(senderID, adminID) {
 		what := fmt.Sprintf("@%s #id%d\n%s %s\nHi,Admin! 别逗了，宝！\n%s",
-			c.Message().Sender.Username,
-			c.Message().Sender.ID,
-			c.Message().Sender.FirstName,
-			c.Message().Sender.LastName,
+			c.Message().Chat.Username,
+			c.Message().Chat.ID,
+			c.Message().Chat.FirstName,
+			c.Message().Chat.LastName,
 			c.Message().Caption)
 		return c.Reply(what)
 	}
+	return nil
 }
 
 // OnVoice
@@ -776,12 +782,13 @@ func OnPrivateSendToMeByVoice(c tele.Context) error {
 
 	if strings.EqualFold(senderID, adminID) {
 		what := fmt.Sprintf("@%s #id%d\n%s %s\nHi,Admin! 别逗了，宝！\n%s",
-			c.Message().Sender.Username,
-			c.Message().Sender.ID,
-			c.Message().Sender.FirstName,
-			c.Message().Sender.LastName,
+			c.Message().Chat.Username,
+			c.Message().Chat.ID,
+			c.Message().Chat.FirstName,
+			c.Message().Chat.LastName,
 			c.Message().Caption)
 		return c.Reply(what)
 	}
+	return nil
 
 }
