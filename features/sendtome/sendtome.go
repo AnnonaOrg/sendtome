@@ -113,6 +113,9 @@ func OnPrivateSendToMe(c tele.Context) error {
 		return nil
 		// return c.Reply("感谢！✅私聊内容转投成功。")
 	}
+	if !strings.EqualFold(senderID, adminID) {
+		return nil
+	}
 	what := fmt.Sprintf("@%s #id%d\n%s %s\nHi,Admin! 别逗了，宝！\n%s",
 		c.Message().Sender.Username,
 		c.Message().Sender.ID,
@@ -221,6 +224,9 @@ func OnPrivateSendToMeByPhoto(c tele.Context) error {
 		return fmt.Errorf("获取图片信息失败")
 	}
 
+	if !strings.EqualFold(senderID, adminID) {
+		return nil
+	}
 	what := fmt.Sprintf("@%s #id%d\n%s %s\nHi,Admin! 别逗了，宝！\n%s",
 		c.Message().Sender.Username,
 		c.Message().Sender.ID,
@@ -329,6 +335,9 @@ func OnPrivateSendToMeByAudio(c tele.Context) error {
 		return fmt.Errorf("获取图片信息失败")
 	}
 
+	if !strings.EqualFold(senderID, adminID) {
+		return nil
+	}
 	what := fmt.Sprintf("@%s #id%d\n%s %s\nHi,Admin! 别逗了，宝！\n%s",
 		c.Message().Sender.Username,
 		c.Message().Sender.ID,
@@ -437,6 +446,9 @@ func OnPrivateSendToMeByAnimation(c tele.Context) error {
 		return fmt.Errorf("获取图片信息失败")
 	}
 
+	if !strings.EqualFold(senderID, adminID) {
+		return nil
+	}
 	what := fmt.Sprintf("@%s #id%d\n%s %s\nHi,Admin! 别逗了，宝！\n%s",
 		c.Message().Sender.Username,
 		c.Message().Sender.ID,
@@ -545,6 +557,9 @@ func OnPrivateSendToMeByDocument(c tele.Context) error {
 		return fmt.Errorf("获取图片信息失败")
 	}
 
+	if !strings.EqualFold(senderID, adminID) {
+		return nil
+	}
 	what := fmt.Sprintf("@%s #id%d\n%s %s\nHi,Admin! 别逗了，宝！\n%s",
 		c.Message().Sender.Username,
 		c.Message().Sender.ID,
@@ -653,6 +668,9 @@ func OnPrivateSendToMeByVideo(c tele.Context) error {
 		return fmt.Errorf("获取图片信息失败")
 	}
 
+	if !strings.EqualFold(senderID, adminID) {
+		return nil
+	}
 	what := fmt.Sprintf("@%s #id%d\n%s %s\nHi,Admin! 别逗了，宝！\n%s",
 		c.Message().Sender.Username,
 		c.Message().Sender.ID,
@@ -761,6 +779,9 @@ func OnPrivateSendToMeByVoice(c tele.Context) error {
 		return fmt.Errorf("获取图片信息失败")
 	}
 
+	if !strings.EqualFold(senderID, adminID) {
+		return nil
+	}
 	what := fmt.Sprintf("@%s #id%d\n%s %s\nHi,Admin! 别逗了，宝！\n%s",
 		c.Message().Sender.Username,
 		c.Message().Sender.ID,
