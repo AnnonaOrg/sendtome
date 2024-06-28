@@ -14,13 +14,6 @@ import (
 
 var syncMap sync.Map
 
-// OnText              = "\atext"
-// OnPhoto             = "\aphoto"
-// OnAudio             = "\aaudio"
-// OnAnimation         = "\aanimation"
-// OnDocument          = "\adocument"
-// OnVideo             = "\avideo"
-// OnVoice             = "\avoice"
 func init() {
 	features.RegisterFeature(tele.OnText, OnPrivateSendToMe)
 	features.RegisterFeature(tele.OnPhoto, OnPrivateSendToMeByPhoto)

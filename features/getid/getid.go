@@ -13,18 +13,24 @@ func init() {
 }
 func OnGetID(c tele.Context) error {
 	text := ""
-	text = fmt.Sprintf("@%s(%d)",
-		c.Message().Sender.Username, c.Message().Sender.ID,
-	)
-	if c.Message().FromGroup() || c.Message().FromChannel() {
-		if len(c.Message().Chat.Username) > 0 {
-			text = fmt.Sprintf("%s\n%s @%s(%d)", text,
-				c.Message().Chat.Title, c.Message().Chat.Username, c.Message().Chat.ID,
-			)
-		} else {
-			text = fmt.Sprintf("%s\n%s(%d)", text,
-				c.Message().Chat.Title, c.Message().Chat.ID,
-			)
+	if c.Message().FromChannel() {
+		text = fmt.Sprintf("%s\n%s(%d)", text,
+			c.Message().Chat.Title, c.Message().Chat.ID,
+		)
+	} else {
+		text = fmt.Sprintf("@%s(%d)",
+			c.Message().Sender.Username, c.Message().Sender.ID,
+		)
+		if c.Message().FromGroup() {
+			if len(c.Message().Chat.Username) > 0 {
+				text = fmt.Sprintf("%s\n%s @%s(%d)", text,
+					c.Message().Chat.Title, c.Message().Chat.Username, c.Message().Chat.ID,
+				)
+			} else {
+				text = fmt.Sprintf("%s\n%s(%d)", text,
+					c.Message().Chat.Title, c.Message().Chat.ID,
+				)
+			}
 		}
 	}
 
