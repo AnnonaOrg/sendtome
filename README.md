@@ -50,5 +50,5 @@ AnnonaOrg官方频道: [@annonaOrg](https://t.me/annonaOrg)
 如果该项目对您有所帮助，希望可以请我喝一杯咖啡☕️
 Usdt(trc20)打赏地址: 
 ```
-TYQfioyM9iTnHorDRa6vJXLcA6aeZo6887
+TQKsqiZJcgcbNfAtpjtPz9usJiEcRzTswT
 ```
