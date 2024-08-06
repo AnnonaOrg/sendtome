@@ -1,4 +1,4 @@
-module github.com/umfaka/sendtome
+module github.com/AnnonaOrg/sendtome
 
 go 1.22.1
 

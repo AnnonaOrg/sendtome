@@ -3,7 +3,7 @@ package getid
 import (
 	"fmt"
 
-	"github.com/umfaka/sendtome/internal/features"
+	"github.com/AnnonaOrg/sendtome/internal/features"
 
 	tele "gopkg.in/telebot.v3"
 )

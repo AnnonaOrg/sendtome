@@ -5,13 +5,13 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/umfaka/sendtome/internal/log"
+	"github.com/AnnonaOrg/sendtome/internal/log"
 
 	"github.com/AnnonaOrg/osenv"
 	"github.com/gin-gonic/gin"
-	"github.com/umfaka/sendtome/internal/constvar"
-	_ "github.com/umfaka/sendtome/internal/dotenv"
-	"github.com/umfaka/sendtome/router"
+	"github.com/AnnonaOrg/sendtome/internal/constvar"
+	_ "github.com/AnnonaOrg/sendtome/internal/dotenv"
+	"github.com/AnnonaOrg/sendtome/router"
 )
 
 func main() {

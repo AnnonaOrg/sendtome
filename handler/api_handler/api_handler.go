@@ -2,8 +2,8 @@ package api_handler
 
 import (
 	"github.com/AnnonaOrg/pkg/errno"
-	"github.com/umfaka/sendtome/handler"
-	"github.com/umfaka/sendtome/internal/constvar"
+	"github.com/AnnonaOrg/sendtome/handler"
+	"github.com/AnnonaOrg/sendtome/internal/constvar"
 	"github.com/gin-gonic/gin"
 )
 

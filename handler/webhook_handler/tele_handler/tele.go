@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 
 	"github.com/gin-gonic/gin"
-	_ "github.com/umfaka/sendtome/cmd/sendtome/distro/all"
-	"github.com/umfaka/sendtome/internal/features"
-	"github.com/umfaka/sendtome/internal/log"
+	_ "github.com/AnnonaOrg/sendtome/cmd/sendtome/distro/all"
+	"github.com/AnnonaOrg/sendtome/internal/features"
+	"github.com/AnnonaOrg/sendtome/internal/log"
 	tele "gopkg.in/telebot.v3"
 )
 
