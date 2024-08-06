@@ -1,16 +1,14 @@
 module github.com/umfaka/sendtome
 
-go 1.21
-
-toolchain go1.22.1
+go 1.22.1
 
 require (
 	github.com/AnnonaOrg/osenv v0.1.14
 	github.com/AnnonaOrg/pkg/errno v0.0.0-20240408104401-3a28f6d71490
 	github.com/AnnonaOrg/pkg/godotenv v0.0.0-20240408104401-3a28f6d71490
 	github.com/gin-gonic/gin v1.10.0
-	github.com/sirupsen/logrus v1.6.0
-	gopkg.in/telebot.v3 v3.2.1
+	github.com/sirupsen/logrus v1.9.3
+	gopkg.in/telebot.v3 v3.3.7
 )
 
 require (
@@ -26,7 +24,6 @@ require (
 	github.com/goccy/go-json v0.10.2 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.7 // indirect
-	github.com/konsorten/go-windows-terminal-sequences v1.0.3 // indirect
 	github.com/leodido/go-urn v1.4.0 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
