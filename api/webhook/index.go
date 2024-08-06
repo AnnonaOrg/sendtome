@@ -10,7 +10,7 @@ import (
 
 	_ "github.com/umfaka/sendtome/cmd/sendtome/distro/all"
 	"github.com/umfaka/sendtome/common"
-	"github.com/umfaka/sendtome/internal/features"
+	"github.com/umfaka/sendtome/features"
 	"github.com/umfaka/sendtome/internal/utils"
 	tele "gopkg.in/telebot.v3"
 )
