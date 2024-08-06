@@ -1,8 +1,8 @@
 package about
 
 import (
-	"github.com/AnnonaOrg/sendtome/core/constvar"
-	"github.com/AnnonaOrg/sendtome/core/features"
+	"github.com/umfaka/sendtome/core/constvar"
+	"github.com/umfaka/sendtome/core/features"
 
 	tele "gopkg.in/telebot.v3"
 )

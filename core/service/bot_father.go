@@ -4,8 +4,8 @@ import (
 	"strings"
 
 	"github.com/AnnonaOrg/osenv"
-	"github.com/AnnonaOrg/sendtome/core/log"
-	"github.com/AnnonaOrg/sendtome/core/utils"
+	"github.com/umfaka/sendtome/core/log"
+	"github.com/umfaka/sendtome/core/utils"
 )
 
 func SetBotFatherWebhook() {

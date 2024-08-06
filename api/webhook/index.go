@@ -8,10 +8,10 @@ import (
 	"os"
 	"strings"
 
-	_ "github.com/AnnonaOrg/sendtome/cmd/sendtome/distro/all"
-	"github.com/AnnonaOrg/sendtome/common"
-	"github.com/AnnonaOrg/sendtome/core/features"
-	"github.com/AnnonaOrg/sendtome/core/utils"
+	_ "github.com/umfaka/sendtome/cmd/sendtome/distro/all"
+	"github.com/umfaka/sendtome/common"
+	"github.com/umfaka/sendtome/core/features"
+	"github.com/umfaka/sendtome/core/utils"
 	tele "gopkg.in/telebot.v3"
 )
 

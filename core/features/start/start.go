@@ -3,7 +3,7 @@ package start
 import (
 	"os"
 
-	"github.com/AnnonaOrg/sendtome/core/features"
+	"github.com/umfaka/sendtome/core/features"
 
 	tele "gopkg.in/telebot.v3"
 )

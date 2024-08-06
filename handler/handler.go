@@ -5,7 +5,7 @@ import (
 
 	"github.com/AnnonaOrg/pkg/errno"
 	"github.com/gin-gonic/gin"
-	"github.com/AnnonaOrg/sendtome/core/response"
+	"github.com/umfaka/sendtome/core/response"
 )
 
 func SendResponse(c *gin.Context, err error, data interface{}) {

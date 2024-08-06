@@ -4,11 +4,11 @@ import (
 	"time"
 
 	"github.com/AnnonaOrg/osenv"
-	_ "github.com/AnnonaOrg/sendtome/cmd/sendtome/distro/all"
-	"github.com/AnnonaOrg/sendtome/common"
-	_ "github.com/AnnonaOrg/sendtome/core/dotenv"
-	"github.com/AnnonaOrg/sendtome/core/features"
-	"github.com/AnnonaOrg/sendtome/core/log"
+	_ "github.com/umfaka/sendtome/cmd/sendtome/distro/all"
+	"github.com/umfaka/sendtome/common"
+	_ "github.com/umfaka/sendtome/core/dotenv"
+	"github.com/umfaka/sendtome/core/features"
+	"github.com/umfaka/sendtome/core/log"
 	tele "gopkg.in/telebot.v3"
 )
 

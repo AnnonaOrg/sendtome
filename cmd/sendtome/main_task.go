@@ -5,10 +5,10 @@ import (
 	"time"
 
 	"github.com/AnnonaOrg/osenv"
-	"github.com/AnnonaOrg/sendtome/core/constvar"
-	"github.com/AnnonaOrg/sendtome/core/log"
-	"github.com/AnnonaOrg/sendtome/core/service"
-	"github.com/AnnonaOrg/sendtome/core/utils"
+	"github.com/umfaka/sendtome/core/constvar"
+	"github.com/umfaka/sendtome/core/log"
+	"github.com/umfaka/sendtome/core/service"
+	"github.com/umfaka/sendtome/core/utils"
 )
 
 func mainTask() {

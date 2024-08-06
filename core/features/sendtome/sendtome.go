@@ -7,8 +7,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/AnnonaOrg/sendtome/core/features"
-	"github.com/AnnonaOrg/sendtome/core/service"
+	"github.com/umfaka/sendtome/core/features"
+	"github.com/umfaka/sendtome/core/service"
 	tele "gopkg.in/telebot.v3"
 )
 

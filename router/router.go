@@ -1,10 +1,10 @@
 package router
 
 import (
-	"github.com/AnnonaOrg/sendtome/handler/api_handler"
+	"github.com/umfaka/sendtome/handler/api_handler"
 
 	"github.com/gin-gonic/gin"
-	"github.com/AnnonaOrg/sendtome/handler/webhook_handler/tele_handler"
+	"github.com/umfaka/sendtome/handler/webhook_handler/tele_handler"
 )
 
 // Load loads the middlewares, routes, handlers.
