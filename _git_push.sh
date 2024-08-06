@@ -1,14 +1,14 @@
 #!/bin/bash
 
-VERSION=0.0.3
-APPNAME=telebot_app_serverless_sendtome
+VERSION=0.1.0
+APPNAME="sendtome"
 echo "package constvar" > ./internal/constvar/version.go
 echo "const(APP_NAME = \"${APPNAME}\"" >> ./internal/constvar/version.go
 echo "APP_VERSION = \"${VERSION}\")" >> ./internal/constvar/version.go
 go fmt ./internal/constvar
 
 
-rm ./main/main
+rm ./cmd/sendtome/sendtome
 
 #git init #
 git add .
