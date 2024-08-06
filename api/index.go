@@ -8,10 +8,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/dbidib/sendtome/common"
-	"github.com/dbidib/sendtome/features"
-	_ "github.com/dbidib/sendtome/main/distro/all"
-	"github.com/dbidib/sendtome/utils"
+	_ "github.com/umfaka/sendtome/cmd/sendtome/distro/all"
+	"github.com/umfaka/sendtome/common"
+	"github.com/umfaka/sendtome/internal/features"
+	"github.com/umfaka/sendtome/internal/utils"
 	tele "gopkg.in/telebot.v3"
 )
 
@@ -70,12 +70,11 @@ func init() {
 		}
 
 		bot.SetCommands(commands)
-
 		webhookURL := os.Getenv("BOT_TELEGRAM_WEBHOOK_URL")
 		if len(webhookURL) > 0 && strings.HasPrefix(webhookURL, "https") {
 			utils.SetTelegramWebhook(botToken, webhookURL)
 		}
-
+		// service.SetBotFatherWebhook()
 	}
 
 	features.Handle(bot)

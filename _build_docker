@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm ./cmd/sendtome/sendtome
+
+#docker build -t annona/sendtome:beta .   &&  docker push annona/sendtome:beta
+docker build -t sendtome:localhost .
+#docker image ls
