@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/AnnonaOrg/sendtome/internal/features"
-	"github.com/AnnonaOrg/sendtome/internal/utils"
+	"github.com/AnnonaOrg/sendtome/core/features"
+	"github.com/AnnonaOrg/sendtome/core/utils"
 	tele "gopkg.in/telebot.v3"
 )
 

@@ -5,12 +5,12 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/AnnonaOrg/sendtome/internal/log"
+	"github.com/AnnonaOrg/sendtome/core/log"
 
 	"github.com/AnnonaOrg/osenv"
 	"github.com/gin-gonic/gin"
-	"github.com/AnnonaOrg/sendtome/internal/constvar"
-	_ "github.com/AnnonaOrg/sendtome/internal/dotenv"
+	"github.com/AnnonaOrg/sendtome/core/constvar"
+	_ "github.com/AnnonaOrg/sendtome/core/dotenv"
 	"github.com/AnnonaOrg/sendtome/router"
 )
 

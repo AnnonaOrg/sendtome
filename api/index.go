@@ -10,8 +10,8 @@ import (
 
 	_ "github.com/AnnonaOrg/sendtome/cmd/sendtome/distro/all"
 	"github.com/AnnonaOrg/sendtome/common"
-	"github.com/AnnonaOrg/sendtome/internal/features"
-	"github.com/AnnonaOrg/sendtome/internal/utils"
+	"github.com/AnnonaOrg/sendtome/core/features"
+	"github.com/AnnonaOrg/sendtome/core/utils"
 	tele "gopkg.in/telebot.v3"
 )
 

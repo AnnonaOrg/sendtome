@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/AnnonaOrg/sendtome/internal/features"
+	"github.com/AnnonaOrg/sendtome/core/features"
 
 	tele "gopkg.in/telebot.v3"
 )

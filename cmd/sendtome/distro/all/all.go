@@ -1,17 +1,17 @@
 package all
 
 import (
-	_ "github.com/AnnonaOrg/sendtome/internal/features/about"
+	_ "github.com/AnnonaOrg/sendtome/core/features/about"
 
-	_ "github.com/AnnonaOrg/sendtome/internal/features/getid"
-	_ "github.com/AnnonaOrg/sendtome/internal/features/ping"
-	_ "github.com/AnnonaOrg/sendtome/internal/features/start"
+	_ "github.com/AnnonaOrg/sendtome/core/features/getid"
+	_ "github.com/AnnonaOrg/sendtome/core/features/ping"
+	_ "github.com/AnnonaOrg/sendtome/core/features/start"
 
-	_ "github.com/AnnonaOrg/sendtome/internal/features/sendtome"
+	_ "github.com/AnnonaOrg/sendtome/core/features/sendtome"
 
-	_ "github.com/AnnonaOrg/sendtome/internal/features/info"
+	_ "github.com/AnnonaOrg/sendtome/core/features/info"
 
-	_ "github.com/AnnonaOrg/sendtome/internal/features/sendcrypto"
+	_ "github.com/AnnonaOrg/sendtome/core/features/sendcrypto"
 
-	_ "github.com/AnnonaOrg/sendtome/internal/features/add_bot"
+	_ "github.com/AnnonaOrg/sendtome/core/features/add_bot"
 )
