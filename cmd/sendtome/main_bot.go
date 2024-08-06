@@ -6,9 +6,9 @@ import (
 	"github.com/AnnonaOrg/osenv"
 	_ "github.com/umfaka/sendtome/cmd/sendtome/distro/all"
 	"github.com/umfaka/sendtome/common"
-	_ "github.com/umfaka/sendtome/internal/dotenv"
-	"github.com/umfaka/sendtome/internal/features"
-	"github.com/umfaka/sendtome/internal/log"
+	_ "github.com/umfaka/sendtome/core/dotenv"
+	"github.com/umfaka/sendtome/core/features"
+	"github.com/umfaka/sendtome/core/log"
 	tele "gopkg.in/telebot.v3"
 )
 

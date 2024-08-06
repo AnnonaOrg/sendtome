@@ -5,12 +5,12 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/umfaka/sendtome/internal/log"
+	"github.com/umfaka/sendtome/core/log"
 
 	"github.com/AnnonaOrg/osenv"
 	"github.com/gin-gonic/gin"
-	"github.com/umfaka/sendtome/internal/constvar"
-	_ "github.com/umfaka/sendtome/internal/dotenv"
+	"github.com/umfaka/sendtome/core/constvar"
+	_ "github.com/umfaka/sendtome/core/dotenv"
 	"github.com/umfaka/sendtome/router"
 )
 

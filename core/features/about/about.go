@@ -1,8 +1,8 @@
 package about
 
 import (
-	"github.com/umfaka/sendtome/internal/constvar"
-	"github.com/umfaka/sendtome/internal/features"
+	"github.com/umfaka/sendtome/core/constvar"
+	"github.com/umfaka/sendtome/core/features"
 
 	tele "gopkg.in/telebot.v3"
 )

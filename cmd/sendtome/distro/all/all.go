@@ -1,17 +1,17 @@
 package all
 
 import (
-	_ "github.com/umfaka/sendtome/internal/features/about"
+	_ "github.com/umfaka/sendtome/core/features/about"
 
-	_ "github.com/umfaka/sendtome/internal/features/getid"
-	_ "github.com/umfaka/sendtome/internal/features/ping"
-	_ "github.com/umfaka/sendtome/internal/features/start"
+	_ "github.com/umfaka/sendtome/core/features/getid"
+	_ "github.com/umfaka/sendtome/core/features/ping"
+	_ "github.com/umfaka/sendtome/core/features/start"
 
-	_ "github.com/umfaka/sendtome/internal/features/sendtome"
+	_ "github.com/umfaka/sendtome/core/features/sendtome"
 
-	_ "github.com/umfaka/sendtome/internal/features/info"
+	_ "github.com/umfaka/sendtome/core/features/info"
 
-	_ "github.com/umfaka/sendtome/internal/features/sendcrypto"
+	_ "github.com/umfaka/sendtome/core/features/sendcrypto"
 
-	_ "github.com/umfaka/sendtome/internal/features/add_bot"
+	_ "github.com/umfaka/sendtome/core/features/add_bot"
 )

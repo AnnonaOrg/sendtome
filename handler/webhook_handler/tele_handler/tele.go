@@ -5,8 +5,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	_ "github.com/umfaka/sendtome/cmd/sendtome/distro/all"
-	"github.com/umfaka/sendtome/internal/features"
-	"github.com/umfaka/sendtome/internal/log"
+	"github.com/umfaka/sendtome/core/features"
+	"github.com/umfaka/sendtome/core/log"
 	tele "gopkg.in/telebot.v3"
 )
 

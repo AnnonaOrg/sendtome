@@ -3,7 +3,7 @@ RUN apk add --no-cache --update git build-base
 
 WORKDIR /app
 COPY . .
-RUN go build \
+RUN go mod tidy && go build \
     -a \
     -trimpath \
     -o sendtome \

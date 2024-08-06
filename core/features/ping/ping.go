@@ -3,7 +3,7 @@ package ping
 import (
 	"fmt"
 
-	"github.com/umfaka/sendtome/internal/features"
+	"github.com/umfaka/sendtome/core/features"
 
 	tele "gopkg.in/telebot.v3"
 )
